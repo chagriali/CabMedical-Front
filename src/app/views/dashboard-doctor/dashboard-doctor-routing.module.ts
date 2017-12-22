@@ -6,6 +6,8 @@ import {DoctorPatientsListComponent,} from "./patients-list/patients-list.compon
 import {DoctorDetailPatientComponent} from "./detail-patient/detail-patient.component";
 import {ConsultationsListComponent} from "./consultations-list/consultations-list.component";
 import {ConsultationEditComponent} from "./consultation-edit/consultation-edit.component";
+import {DepensesListComponent} from "./depenses-list/depenses-list.component";
+import {AddDepenseComponent} from "./add-depense/add-depense-component";
 
 const routes: Routes = [
   {
@@ -44,6 +46,22 @@ const routes: Routes = [
         component: ConsultationEditComponent ,
         data: {
           title: 'Edit consultation'
+        }
+      },
+      {
+
+        path: 'depenses',
+        component: DepensesListComponent ,
+        data: {
+          title: 'Liste des Dépenses '
+        }
+      },
+      {
+
+        path: 'depenses/new',
+        component: AddDepenseComponent ,
+        data: {
+          title: ' Nouvelle Dépenses '
         }
       },
     ]

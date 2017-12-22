@@ -20,6 +20,9 @@ import {MedicamentService} from "../../services/medicament.service";
 import {ReportingService} from "../../services/reporting.service";
 import {PdfTestComponent} from "./pdf-test/pdf-test.component";
 import {MaladieService} from "../../services/maladie.service";
+import {DepensesListComponent} from "./depenses-list/depenses-list.component";
+import {DepensesService} from "../../services/depenses.service";
+import {AddDepenseComponent} from "./add-depense/add-depense-component";
 
 @NgModule({
   imports: [
@@ -35,7 +38,13 @@ import {MaladieService} from "../../services/maladie.service";
 
 
   ],
-  declarations: [ DashboardDoctorComponent ,DoctorPatientsListComponent , DoctorDetailPatientComponent , ConsultationsListComponent,ConsultationEditComponent],
-  providers:[SexService,PatientService,DossierService,ConsultationsService,SymptomeService,MedicamentService,MaladieService,ReportingService]
+  declarations: [ DashboardDoctorComponent ,
+                  DoctorPatientsListComponent ,
+                  DoctorDetailPatientComponent ,
+                  ConsultationsListComponent,
+                  ConsultationEditComponent ,
+                  DepensesListComponent,
+                  AddDepenseComponent],
+  providers:[DepensesService, SexService,PatientService,DossierService,ConsultationsService,SymptomeService,MedicamentService,MaladieService,ReportingService]
 })
 export class DashboardDoctorModule { }
